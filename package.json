@@ -4,8 +4,16 @@
   "description": "NextJs Front for Unicorn's Blog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "author": "Nabil AINAS, Stéphane BAMAN, Mehdi BELLAM, Pierre-Nicolas WATIN-AUGOUARD",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }
