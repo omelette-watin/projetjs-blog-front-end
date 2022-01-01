@@ -9,3 +9,5 @@ const verifyToken = async (token) => {
         })
     return res.data
 }
+
+export default verifyToken

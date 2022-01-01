@@ -1,9 +1,11 @@
-function Dashboard() {
+import withAuth from "../../middlewares/withAuth"
+
+const Dashboard = ({ user }) => {
     return (
         <div>
-            <h1>Votre DashBoard</h1>
+            <h1>Dashboard de {user.username}</h1>
         </div>
     )
 }
 
-export default Dashboard
+export default withAuth(Dashboard)
