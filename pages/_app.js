@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { UserContext } from "../components/user"
 import verifyToken from "../services/verifyToken"
-
+import '../styles/globals.css'
 
 function App({ Component, pageProps }) {
     const [user, setUser] = useState(null)

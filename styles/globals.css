@@ -1,0 +1,98 @@
+:root {
+    /* Colors */
+    --darkBlue: hsl(233, 26%, 24%);
+    --limeGreen: hsl(136, 65%, 51%);
+    --brightCyan: hsl(192, 70%, 51%);
+    --grayishBlue: hsl(233, 8%, 62%);
+    --lightGrayishBlue: hsl(220, 16%, 96%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font Sizes*/
+    --font-sm: 0.875rem;
+    --font-med: 1.125rem;
+    --font-lg: 1.875rem;
+    --font-vlg: 2.25rem;
+    --font-xlg: 3.25rem;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    font-size: var(--font-sm);
+    font-family: "Public Sans", sans-serif;
+    color: var(--grayishBlue);
+    background: var(--white);
+    scroll-behavior: smooth;
+}
+
+
+
+/* Text */
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    color: unset;
+    cursor: pointer;
+}
+
+button {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--darkBlue);
+}
+
+h1 {
+    font-size: var(--font-vlg);
+}
+
+h2 {
+    font-size: var(--font-lg);
+}
+
+h3 {
+    font-size: var(--font-med);
+}
+
+@media (min-width: 64em) {
+    body {
+        font-size: var(--font-med);
+    }
+
+    h1 {
+        font-size: var(--font-xlg) ;
+    }
+
+    h2 {
+        font-size: var(--font-vlg) ;
+    }
+
+    h3 {
+        font-size: var(--font-lg);
+    }
+}
