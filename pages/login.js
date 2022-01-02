@@ -9,4 +9,12 @@ function Login() {
     )
 }
 
+export async function getStaticProps(context){
+    return {
+        props: {
+            title: "| Connexion"
+        }
+    }
+}
+
 export default Login

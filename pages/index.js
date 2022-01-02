@@ -6,4 +6,12 @@ function Home() {
     )
 }
 
+export async function getStaticProps(context){
+    return {
+        props: {
+            title: "| Accueil"
+        }
+    }
+}
+
 export default Home

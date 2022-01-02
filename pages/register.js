@@ -6,4 +6,12 @@ function Register() {
     )
 }
 
+export async function getStaticProps(context){
+    return {
+        props: {
+            title: "| Inscription"
+        }
+    }
+}
+
 export default Register
