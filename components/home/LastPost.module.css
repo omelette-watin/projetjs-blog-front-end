@@ -28,10 +28,11 @@
     border-radius: 0.5rem;
     border: 1px solid var(--veryLightGray);
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.24);
-    transition: border 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .post:hover {
+    transform: scale(1.05);
     border: 1px solid var(--brightCyan);
 }
 
@@ -46,6 +47,7 @@
 
 .date {
     font-size: 0.9rem;
+    color: var(--darkBlue);
 }
 
 .text {
@@ -59,7 +61,13 @@
 }
 
 .link {
+    margin-top: 3rem;
+    margin-right: 2rem;
+    text-align: right;
+}
 
+.link a {
+    font-size: 1.25rem;
 }
 
 @media screen and (min-width: 64em) {

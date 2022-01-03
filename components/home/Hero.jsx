@@ -34,7 +34,7 @@ const Hero  = () => {
                                 nous ont rejoint.
                                 {user
                                     ?  <span> Merci à <strong>vous</strong> 💖 !</span>
-                                    :  <span> Pourquoi pas <strong>vous</strong> ?</span>
+                                    :  <span> Pourquoi pas <strong><Link href={"/register"}><a>vous</a></Link></strong> ?</span>
                                 }
                             </div>
                         </div>

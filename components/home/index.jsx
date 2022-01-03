@@ -6,8 +6,8 @@ const HomePage = () => {
     return (
         <div>
             <Hero/>
-            <LastPosts/>
             <About/>
+            <LastPosts/>
         </div>
     )
 }

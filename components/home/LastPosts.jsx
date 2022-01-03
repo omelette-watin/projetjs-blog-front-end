@@ -63,7 +63,9 @@ const LastPosts = () => {
                     }
                 </div>
                 <div className={styles.link}>
-
+                    <Link href={"/blog"}>
+                        <a className={`btn gradient`}>Voir plus d'articles</a>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -1,4 +1,4 @@
-import styles from "./AuthenticationError.module.css"
+import styles from "./AuthorizationError.module.css"
 import Link from "next/link"
 import {RiArrowGoBackFill} from "react-icons/ri";
 

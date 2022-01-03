@@ -25,6 +25,7 @@
 }
 
 .pitch {
+    text-align: justify;
     margin-top: 2rem;
     color: var(--darkBlue);
 }
@@ -32,7 +33,7 @@
 .users {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .users strong {
@@ -40,12 +41,9 @@
     font-weight: 700;
 }
 
-.red {
-    color: red;
-}
-
 .counter {
     color: var(--darkBlue);
+    margin-bottom: 0.4rem;
 }
 
 .links {
@@ -90,6 +88,14 @@ a.btn {
 
     .intro {
         margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 63.9375em) {
+    .pitch {
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 

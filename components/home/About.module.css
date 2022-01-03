@@ -22,6 +22,11 @@
     background-color: var(--white);
     border-radius: 0.5rem;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.24);
+    transition: all 200ms ease-in-out;
+}
+
+.question:hover {
+    transform: scale(1.05);
 }
 
 .title div {
