@@ -22,35 +22,38 @@ const Hero  = () => {
                 </div>
                 <div className={styles.intro}>
                     <h1>Votre  <strong>Opinion</strong> Compte</h1>
-                    <p className={styles.pitch}>
-                        Cur tabes potus? Neuter bursa saepe tractares tumultumque est. Sectam ridetiss, tanquam regius luna.
-                        Neuter bursa saepe tractares tumultumque est. Sectam ridetiss, tanquam regius luna.
-                        Cur tabes potus?
-                    </p>
-                    <div className={styles.users}>
-                        <div id="counter" className={styles.counter}>0 personnes</div>
-                        <div>
-                            nous ont rejoint.
+                    <div className={styles.content}>
+                        <p className={styles.pitch}>
+                            Cur tabes potus? Neuter bursa saepe tractares tumultumque est. Sectam ridetiss, tanquam regius luna.
+                            Neuter bursa saepe tractares tumultumque est. Sectam ridetiss, tanquam regius luna.
+                            Cur tabes potus?
+                        </p>
+                        <div className={styles.users}>
+                            <div id="counter" className={styles.counter}>0 personnes</div>
+                            <div>
+                                nous ont rejoint.
+                                {user
+                                    ?  <span> Merci à <strong>vous</strong> 💖 !</span>
+                                    :  <span> Pourquoi pas <strong>vous</strong> ?</span>
+                                }
+                            </div>
+                        </div>
+
+                        <div className={styles.links}>
+                            <Link href={"/blog"}>
+                                <a className={styles.btn}>Voir les derniers articles</a>
+                            </Link>
                             {user
-                                ?  <span> Merci à <strong>vous</strong> 💖 !</span>
-                                :  <span> Pourquoi pas <strong>vous</strong> ?</span>
+                                ? <Link href={"/dashboard"}>
+                                    <a className={`btn gradient`}>Mon Dashboard</a>
+                                </Link>
+                                : <Link href={"/register"}>
+                                    <a className={`btn gradient`}>Créer un compte</a>
+                                </Link>
                             }
-                           </div>
+                        </div>
                     </div>
 
-                    <div className={styles.links}>
-                        <Link href={"/posts"}>
-                            <a className={styles.btn}>Voir les derniers articles</a>
-                        </Link>
-                        {user
-                            ? <Link href={"/dashboard"}>
-                                <a className={`btn gradient`}>Mon Dashboard</a>
-                            </Link>
-                            : <Link href={"/register"}>
-                                <a className={`btn gradient`}>Créer un compte</a>
-                            </Link>
-                        }
-                    </div>
                 </div>
 
             </div>

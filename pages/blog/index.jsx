@@ -1,8 +1,8 @@
 
-const Posts = () => {
+const Blog = () => {
     return (
         <div>
-            <h1>Tous les articles</h1>
+            <h1>Blog</h1>
         </div>
     )
 }
@@ -15,4 +15,4 @@ export async function getStaticProps(context){
     }
 }
 
-export default Posts
+export default Blog

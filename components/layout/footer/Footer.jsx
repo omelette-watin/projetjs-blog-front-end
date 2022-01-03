@@ -58,7 +58,7 @@ function Footer() {
                 </div>
 
                 <div className={`${styles.links} ${styles.col1}`}>
-                    <Link href={"/posts"}>
+                    <Link href={"/blog"}>
                         <a>Blog</a>
                     </Link>
                     <a href="#">Devenir auteur</a>

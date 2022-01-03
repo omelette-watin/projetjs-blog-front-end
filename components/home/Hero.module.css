@@ -48,8 +48,6 @@
     color: var(--darkBlue);
 }
 
-
-
 .links {
     display: flex;
     flex-direction: column;
@@ -67,7 +65,7 @@
 a.btn {
     font-size: 1rem;
     color: var(--darkBlue);
-    padding: 0.6rem;
+    padding: 0.6rem 1rem;
     border: 2px solid var(--darkBlue);
     border-radius: 50px;
     transition: all 200ms ease-in-out;
@@ -116,6 +114,10 @@ a.btn {
         order: 1;
         text-align: left;
         margin-top: 0;
+    }
+
+    .content {
+        padding-left: 0.7rem;
     }
 
     .links {

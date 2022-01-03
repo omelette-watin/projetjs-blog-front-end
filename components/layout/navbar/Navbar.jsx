@@ -22,7 +22,7 @@ const Navbar = ({user, active}) => {
                 </Link>
             </li>
             <li>
-                <Link href={"/posts"}>
+                <Link href={"/blog"}>
                     <a className={(active === "Blog") ? styles.active : null}>Blog</a>
                 </Link>
             </li>
