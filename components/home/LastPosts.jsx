@@ -1,56 +1,73 @@
-import styles from "./About.module.css"
+import styles from "./LastPost.module.css"
+import Date from "../helpers/Date"
+import Link from "next/link"
 
-const AboutData = [
+const LastPostsData = [
     {
-        title: "Qui somme-nous ?",
+        id: "1",
+        title: "Meta, un flop ?",
+        author: "SuperOmelette",
+        publicationDate: "2021-12-30T15:03:32.013+00:00",
         text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
     },
     {
-        title: "Pourquoi Unicorn ?",
+        id: "2",
+        title: "Matrix est honteux",
+        author: "Magali Watin",
+        publicationDate: "2021-11-24T15:13:32.013+00:00",
         text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
     },
     {
-        title: "Des projets ?",
+        id: "3",
+        title: "L'art d'enseigner",
+        author: "Avetis",
+        publicationDate: "2021-09-06T15:15:32.013+00:00",
         text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
     },
-    {
-        title: "Comment soutenir le projet ?",
-        text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-    }
 ]
 
-const Question = ({title, text }) => (
-    <div className={styles.question}>
+const Post = ({id, title, text, author, date}) => (
+    <div className={styles.post} key={id}>
+        <Link href={`/blog/posts/${id}`}>
+            <a/>
+        </Link>
         <div className={styles.title}>
-            <div />
             <h3>{title}</h3>
+        </div>
+        <div className={styles.date}>
+            <Date dateString={date}/>
         </div>
         <div className={styles.text}>
             {text}
-            <div />
+        </div>
+        <div className={styles.author}>
+            {author}
         </div>
     </div>
 )
 
-const About = () => {
 
+
+const LastPosts = () => {
     return (
-        <section id={"about"} className={styles.about}>
-            <div className={`container p-all`}>
+        <section className={styles.last_posts} id={"latest-posts"}>
+            <div className={"container p-all"}>
                 <div className={styles.headings}>
-                    <h1>À propos</h1>
+                    <h1>Les derniers <strong>articles</strong></h1>
                 </div>
                 <div className={styles.content}>
                     {
-                        AboutData.map((question, index) => (
-                            <Question title={question.title} text={question.text} key={question.title + index}/>
+                        LastPostsData.map((post) => (
+                            <Post title={post.title} text={post.text} author={post.author} date={post.publicationDate} id={post.id}/>
                         ))
                     }
                 </div>
+                <div className={styles.link}>
 
+                </div>
             </div>
         </section>
     )
 }
 
-export default About
+export default LastPosts

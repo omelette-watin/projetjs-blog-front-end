@@ -40,7 +40,7 @@ const Hero  = () => {
                         </div>
 
                         <div className={styles.links}>
-                            <Link href={"/blog"}>
+                            <Link href={"/#latest-posts"}>
                                 <a className={styles.btn}>Voir les derniers articles</a>
                             </Link>
                             {user
