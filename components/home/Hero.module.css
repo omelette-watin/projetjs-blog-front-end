@@ -2,6 +2,10 @@
     background-color: var(--veryLightGray);
 }
 
+.container {
+    /*background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));*/
+}
+
 .logo {
     text-align: center;
 }

@@ -24,6 +24,8 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 2rem;
+    max-width: 80vw;
+    margin: auto;
     background-color: var(--veryLightGray);
     border-radius: 0.5rem;
     border: 1px solid var(--veryLightGray);
@@ -62,16 +64,26 @@
 
 .link {
     margin-top: 3rem;
-    margin-right: 2rem;
-    text-align: right;
+    text-align: center;
 }
 
 .link a {
     font-size: 1.25rem;
 }
 
+
+@media screen and (min-width: 40em) {
+    .links {
+        text-align: right;
+        margin-right: 2rem;
+    }
+}
+
+
 @media screen and (min-width: 64em) {
     .content {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+
 }

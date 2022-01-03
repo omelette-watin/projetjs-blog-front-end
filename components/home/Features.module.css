@@ -2,6 +2,10 @@
     background-color: var(--white);
 }
 
+.headings {
+    text-align: center;
+}
+
 .headings h1 {
     font-weight: 800;
 }
@@ -29,6 +33,7 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 2rem;
+    margin: auto;
     background-color: var(--veryLightGray);
     border-radius: 0.5rem;
     border: 1px solid var(--veryLightGray);
@@ -55,9 +60,16 @@
 
 }
 
+@media screen and (min-width: 34rem) {
+    .feature {
+        max-width: 50vw;
+    }
+}
+
 @media screen and (min-width: 64em) {
     .headings {
         text-align: right;
+        margin-right: 2rem;
     }
 
     .headings p {

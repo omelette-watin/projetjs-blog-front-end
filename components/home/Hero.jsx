@@ -1,7 +1,6 @@
 import styles from "./Hero.module.css"
 import { useUser } from "../user"
 import Link from "next/link"
-import { useState } from "react"
 import { useCountUp } from "react-countup"
 
 const Hero  = () => {

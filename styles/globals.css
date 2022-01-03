@@ -11,6 +11,7 @@
     /* Font Sizes*/
     --font-sm: 0.875rem;
     --font-med: 1.125rem;
+    --font-medl: 1.5rem;
     --font-lg: 1.875rem;
     --font-vlg: 2.55rem;
     --font-xlg: 3.25rem;
@@ -77,7 +78,7 @@ h1 {
 }
 
 h2 {
-    font-size: var(--font-med);
+    font-size: var(--font-medl);
 }
 
 h3 {
@@ -98,7 +99,7 @@ h3 {
     }
 
     h3 {
-        font-size: var(--font-med);
+        font-size: var(--font-medl);
     }
 }
 
