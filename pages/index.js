@@ -1,8 +1,8 @@
+import HomePage from "../components/home/index"
+
 const Home = () => {
     return (
-        <div>
-            <h1>Bienvenue sur le Blog Unicorn's</h1>
-        </div>
+        <HomePage />
     )
 }
 

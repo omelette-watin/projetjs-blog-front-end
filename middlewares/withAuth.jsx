@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
-import verifyToken from "../services/verifyToken"
+import verifyToken from "../services/users/verifyToken"
 
 const withAuth = (WrappedComponent) => {
     return (props) => {

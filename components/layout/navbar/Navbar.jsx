@@ -74,7 +74,7 @@ const Navbar = ({user, active}) => {
                                 <a className={styles.little}>Se connecter</a>
                             </Link>
                             <Link href={"/register"} >
-                                <a className={`btn ${styles.btn} gradient`}>S'inscrire</a>
+                                <a className={`btn gradient`}>S'inscrire</a>
                             </Link>
                         </div>
                 }
@@ -95,7 +95,7 @@ const Navbar = ({user, active}) => {
                                     <a className={styles.little}>Se connecter</a>
                                 </Link>
                                 <Link href={"/register"} >
-                                    <a className={`btn ${styles.btn} gradient`}>S'inscrire</a>
+                                    <a className={`btn gradient`}>S'inscrire</a>
                                 </Link>
                             </div>
                     }
@@ -125,7 +125,7 @@ const Navbar = ({user, active}) => {
                                         <a className={styles.little}>Se connecter</a>
                                     </Link>
                                     <Link href={"/register"} >
-                                        <a className={`btn ${styles.btn} gradient`}>S'inscrire</a>
+                                        <a className={`btn gradient`}>S'inscrire</a>
                                     </Link>
                                 </div>
                             }

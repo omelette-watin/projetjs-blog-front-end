@@ -1,0 +1,116 @@
+.hero {
+    background-color: var(--veryLightGray);
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    min-height: 12.5rem;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.intro h1 strong {
+    color: var(--limeGreen);
+    font-weight: unset;
+}
+
+.pitch {
+    margin-top: 2rem;
+    color: var(--darkBlue);
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.users strong {
+    color: var(--limeGreen);
+    font-weight: 700;
+}
+
+.counter {
+    color: var(--darkBlue);
+}
+
+
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    text-align: center;
+    margin: 3rem auto 0;
+}
+
+.links a {
+    display: block;
+}
+
+a.btn {
+    font-size: 1rem;
+    color: var(--darkBlue);
+    padding: 0.6rem;
+    border: 2px solid var(--darkBlue);
+    border-radius: 50px;
+    transition: all 200ms ease-in-out;
+}
+
+@media screen and (min-width: 40em) {
+    .logo img {
+        min-height: 17.5rem;
+    }
+
+    .links {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+}
+
+@media screen and (max-height: 650px) {
+    .logo img {
+        min-height: 8.5rem;
+    }
+
+    .intro {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        flex: 3;
+        order: 2;
+        text-align: right;
+    }
+
+    .logo img {
+        min-height: 25rem;
+    }
+
+    .intro {
+        flex: 4;
+        order: 1;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .links {
+        margin: 3rem 0 0;
+    }
+}

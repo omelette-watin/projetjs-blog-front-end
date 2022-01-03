@@ -22,12 +22,12 @@
 }
 
 .container.p-all {
-    padding: 4.375rem 1.5rem;
+    padding: 3.375rem 1.5rem;
 }
 
 .container.p-y {
-    padding-top: 4.375rem;
-    padding-bottom: 4.375rem;
+    padding-top: 3.375rem;
+    padding-bottom: 3.375rem;
 }
 
 .container.p-x {
@@ -36,11 +36,11 @@
 }
 
 .container.p-t {
-    padding-top: 4.375rem;
+    padding-top: 3.375rem;
 }
 
 .container.p-b {
-    padding-bottom: 4.375rem;
+    padding-bottom: 3.375rem;
 }
 
 .container.p-l {
@@ -77,8 +77,14 @@
 }
 
 .btn.gradient {
+    padding: 0.8rem 1.9rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 50px;
+    overflow: hidden;
     color: var(--white);
     background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    transition: opacity 200ms ease-in-out;
 }
 
 .bg-lightGray {
@@ -92,21 +98,21 @@
     }
 
     .container.p-all{
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     .container.p-y{
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     .container.p-t {
-        padding-top: 6rem;
+        padding-top: 5rem;
     }
 
     .container.p-b {
-        padding-bottom: 6rem;
+        padding-bottom: 5rem;
     }
 
 }

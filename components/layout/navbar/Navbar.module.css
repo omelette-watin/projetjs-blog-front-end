@@ -80,15 +80,6 @@
     color: var(--darkBlue);
 }
 
-.btn {
-    padding: 0.8rem 1.9rem;
-    font-size: 1rem;
-    font-weight: 400;
-    border-radius: 50px;
-    overflow: hidden;
-    transition: opacity 200ms ease-in-out;
-}
-
 .mobile_menu {
     display: none;
     align-items: center;

@@ -2,7 +2,7 @@ import Layout from "../components/layout/Layout"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { UserContext } from "../components/user"
-import verifyToken from "../services/verifyToken"
+import verifyToken from "../services/users/verifyToken"
 import '../styles/globals.css'
 import '../styles/helpers.css'
 import AuthorizationError from "../components/errors/authorization/AuthorizationError";

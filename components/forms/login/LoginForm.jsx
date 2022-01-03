@@ -1,7 +1,7 @@
 import styles from './LoginForm.module.css'
 import { useRouter } from 'next/router'
 import { useState } from "react"
-import loginUser from "../../../services/loginUser"
+import loginUser from "../../../services/users/loginUser"
 
 const LoginForm = () => {
     const router = useRouter()
