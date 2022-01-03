@@ -6,7 +6,7 @@
 .navbar {
     position: relative;
     padding-top: 1.0625rem;
-    padding-bottom: 0.55rem;
+    padding-bottom: 0.85rem;
     background-color: var(--white);
 }
 
@@ -79,5 +79,127 @@
 .sign a.little:hover {
     color: var(--darkBlue);
 }
+
+.btn {
+    padding: 0.8rem 1.9rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: opacity 200ms ease-in-out;
+}
+
+.mobile_menu {
+    display: none;
+    align-items: center;
+    position: relative;
+    margin-left: 1rem;
+}
+
+.mobile_menu_container {
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin-top: 1rem;
+    min-width: 210px;
+    padding: 2rem 1rem 1rem;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.mobile_menu_container a {
+    font-size: var(--font-med);
+}
+
+.mobile_menu_container ul a:hover {
+    color: var(--darkBlue);
+}
+
+.mobile_links {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.mobile_links li {
+    margin-bottom: 1rem;
+}
+
+.mobile_links li a.active {
+    color: var(--darkBlue);
+}
+
+.mobile_sign {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile_sign a {
+    display: block;
+}
+
+.mobile_sign .little {
+    margin-bottom: 1rem;
+}
+
+.mobile_sign .dc {
+    display: flex;
+    align-items: center;
+}
+
+.mobile_sign .dc p {
+    margin-left: 1rem;
+}
+
+.mobile_sign .little:hover {
+    color: var(--darkBlue);
+}
+
+
+.pad_sign {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.pad_sign a {
+    font-size: 0.8rem;
+}
+
+.pad_sign a.little {
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 1050px) {
+    .links,
+    .sign {
+        display: none;
+    }
+
+    .mobile_menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .pad_sign {
+        display: none;
+    }
+
+    .mobile_links {
+        border-bottom: 2px solid var(--lightGrayishBlue);
+    }
+
+    .mobile_sign {
+        display: block;
+    }
+}
+
 
 

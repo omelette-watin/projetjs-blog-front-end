@@ -10,7 +10,7 @@ const Posts = () => {
 export async function getStaticProps(context){
     return {
         props: {
-            title: "Articles"
+            title: "Blog"
         }
     }
 }
