@@ -12,7 +12,7 @@ const Hero  = () => {
         end: 1338,
         delay: 0,
         suffix: " personnes",
-        duration: 4
+        duration: 3
     })
     return (
         <section className={styles.hero}>
@@ -30,6 +30,8 @@ const Hero  = () => {
                         </p>
                         <div className={styles.users}>
                             <div id="counter" className={styles.counter}>0 personnes</div>
+
+
                             <div>
                                 nous ont rejoint.
                                 {user
