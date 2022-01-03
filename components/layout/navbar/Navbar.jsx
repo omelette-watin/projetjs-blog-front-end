@@ -13,7 +13,7 @@ const Navbar = ({user, active}) => {
             <nav className={`${styles.navbar} flex ai-c jc-sb container p-x`}>
                 <div className={styles.logo}>
                     <Link href={"/"}>
-                        <a><img src={"/images/unicorns-logo.png"} alt="Unicorn's logo"/></a>
+                        <a><img src={"/images/logo.svg"} alt="Unicorn's logo"/></a>
                     </Link>
                 </div>
                 <ul className={styles.links}>
