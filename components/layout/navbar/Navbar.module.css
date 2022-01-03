@@ -49,6 +49,10 @@
     color: var(--darkBlue);
 }
 
+.links a.active {
+    color: var(--darkBlue);
+}
+
 .links a.active:before {
     opacity: 1;
 }

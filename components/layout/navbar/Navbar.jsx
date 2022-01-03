@@ -24,12 +24,12 @@ const Navbar = ({user, active}) => {
                     </li>
                     <li>
                         <Link href={"/users"}>
-                            <a  className={(active === "Utilisateurs") ? styles.active : null}>Utilisateurs</a>
+                            <a className={(active === "Utilisateurs") ? styles.active : null}>Utilisateurs</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href={"#about"}>
-                            <a>À propos</a>
+                        <Link href={"/about"}>
+                            <a className={(active === "À propos") ? styles.active : null}>À propos</a>
                         </Link>
                     </li>
                     {
