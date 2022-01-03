@@ -21,12 +21,13 @@ const LoginForm = () => {
         loginUser(formData)
             .then((res) => {
                 const token = res.data.token
+                alert("token recup")
                 localStorage.setItem("token", token)
+                alert("storage set")
 
                 router.back()
             })
             .catch((e) => {
-                console.log(e)
                 setFormData({
                     ...formData,
                     error: e.response.data.message || e.message,

@@ -39,6 +39,10 @@ function App({ Component, pageProps }) {
         return <Layout><AuthorizationError/></Layout>
     }
 
+    if (pageProps.protected && user && pageProps.userTypes && pageProps.userTypes.indexOf(user.role) === -1) {
+        return <Layout><AuthorizationError/></Layout>
+    }
+
     return (
         <UserContext.Provider value={user}>
             <Layout title={pageProps.title}><Component {...pageProps} /></Layout>

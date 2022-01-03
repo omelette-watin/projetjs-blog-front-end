@@ -12,7 +12,7 @@ function Layout({ children, title }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <Navbar user={user} active={title} />
-            <main>{children}</main>
+            <main style={{minHeight: '50vh'}}>{children}</main>
             <Footer/>
         </div>
     )

@@ -50,7 +50,7 @@ const Navbar = ({user, active}) => {
     )
 
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <nav className={`${styles.navbar} flex ai-c jc-sb container p-x`}>
                 <div className={styles.logo}>
                     <Link href={"/"}>
@@ -134,7 +134,7 @@ const Navbar = ({user, active}) => {
 
                 </div>
             </nav>
-        </div>
+        </header>
     )
 }
 
