@@ -2,7 +2,7 @@ import styles from './Navbar.module.css'
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
-import {RiMenu3Line, RiCloseLine, RiMenu2Line, RiMenuLine, RiLogoutBoxFill, RiLogoutBoxLine} from "react-icons/ri"
+import { RiCloseLine, RiMenuLine, RiLogoutBoxLine} from "react-icons/ri"
 
 
 const Navbar = ({user, active}) => {
@@ -35,7 +35,7 @@ const Navbar = ({user, active}) => {
                 user ?
                     <li>
                         <Link href={"/dashboard"}>
-                            <a>Dashboard</a>
+                            <a className={(active === "Dashboard") ? styles.active : null}>Dashboard</a>
                         </Link>
                     </li>
 

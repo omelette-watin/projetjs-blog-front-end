@@ -9,9 +9,10 @@ function Layout({ children, title }) {
         <div>
             <Head>
                 <title>{title ?  title + " - " : null} Unicorn's Blog </title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <Navbar user={user} active={title} />
-            <main className={"bg-lightGray"}>{children}</main>
+            <main>{children}</main>
             <Footer/>
         </div>
     )

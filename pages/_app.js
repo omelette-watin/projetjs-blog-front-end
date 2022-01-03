@@ -5,6 +5,7 @@ import { UserContext } from "../components/user"
 import verifyToken from "../services/verifyToken"
 import '../styles/globals.css'
 import '../styles/helpers.css'
+import AuthorizationError from "../components/errors/authorization/AuthorizationError";
 
 function App({ Component, pageProps }) {
     const [user, setUser] = useState(null)
@@ -35,7 +36,7 @@ function App({ Component, pageProps }) {
     }, [])
 
     if (pageProps.protected && !user) {
-        return <Layout><div>pd</div></Layout>
+        return <Layout><AuthorizationError/></Layout>
     }
 
     return (

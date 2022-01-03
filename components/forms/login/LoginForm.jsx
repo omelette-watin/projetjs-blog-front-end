@@ -21,7 +21,6 @@ const LoginForm = () => {
         loginUser(formData)
             .then((res) => {
                 const token = res.data.token
-                console.log(token)
                 localStorage.setItem("token", token)
 
                 router.back()
