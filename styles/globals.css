@@ -16,12 +16,14 @@
     --font-xlg: 3.25rem;
 }
 
+html {
+    font-size: 100%;
+}
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
-    font-size: 100%;
 }
 
 body {
@@ -47,21 +49,24 @@ a:visited {
     cursor: pointer;
 }
 
-button {
-    display: inline-block;
-    border: 0;
-    cursor: pointer;
-}
-
 ul,
 ol {
     list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
 }
 
 h1,
 h2,
 h3,
 h4 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
     font-weight: 600;
     line-height: 1.15;
     color: var(--darkBlue);

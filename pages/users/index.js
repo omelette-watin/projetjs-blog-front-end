@@ -6,4 +6,12 @@ function Users() {
     )
 }
 
+export async function getStaticProps(context){
+    return {
+        props: {
+            title: "Utilisateurs"
+        }
+    }
+}
+
 export default Users

@@ -1,38 +1,79 @@
+.header {
+    position: relative;
+    z-index: 1;
+}
+
 .navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 1rem 4rem;
+    position: relative;
+    padding-top: 1.0625rem;
+    padding-bottom: 0.55rem;
+    background-color: var(--white);
 }
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-
+.logo img {
+    width: 8.8125rem;
 }
 
 .links {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    list-style: none;
+    padding: 0;
 }
 
-.links li {
-    margin-right: 1rem;
+.links li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.links a {
+    position: relative;
+    font-size: 1rem;
+    color: var(--grayishBlue);
+    transition: color 200ms ease-in-out;
+}
+
+.links a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    display: block;
+    height: 5px;
+    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.links a:hover {
+    color: var(--darkBlue);
+}
+
+.links a.active:before {
+    opacity: 1;
+}
+
+.links a:hover:before {
+    opacity: 1;
 }
 
 .sign {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem
 }
+
+.sign a {
+    font-size: 1rem;
+    transition: color 200ms ease-in-out;
+}
+
+.sign a:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.sign a:not(.btn):hover {
+    color: var(--darkBlue);
+}
+
+

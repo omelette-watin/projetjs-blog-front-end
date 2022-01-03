@@ -1,7 +1,8 @@
-function Register() {
+
+const Posts = () => {
     return (
         <div>
-            <h1>S'inscrire</h1>
+            <h1>Tous les articles</h1>
         </div>
     )
 }
@@ -9,9 +10,9 @@ function Register() {
 export async function getStaticProps(context){
     return {
         props: {
-            title: "Inscription"
+            title: "Articles"
         }
     }
 }
 
-export default Register
+export default Posts
