@@ -47,7 +47,7 @@ const Navbar = ({user, active}) => {
                     user ?
 
                         <div className={styles.sign}>
-                            <a onClick={logout}>Se déconnecter</a>
+                            <a onClick={logout} className={styles.little}>Se déconnecter</a>
                         </div>
 
                         :
@@ -55,7 +55,7 @@ const Navbar = ({user, active}) => {
                         <div className={styles.sign}>
 
                             <Link href={"/login"}>
-                                <a>Se connecter</a>
+                                <a className={styles.little}>Se connecter</a>
                             </Link>
                             <Link href={"/register"} >
                                 <a className={"btn big-btn gradient"}>S'inscrire</a>
