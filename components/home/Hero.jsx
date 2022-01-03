@@ -29,7 +29,13 @@ const Hero  = () => {
                     </p>
                     <div className={styles.users}>
                         <div id="counter" className={styles.counter}>0 personnes</div>
-                        <div>nous ont rejoint. Pourquoi pas <strong>vous</strong> ?</div>
+                        <div>
+                            nous ont rejoint.
+                            {user
+                                ?  <span> Merci à <strong>vous</strong> 💖 !</span>
+                                :  <span> Pourquoi pas <strong>vous</strong> ?</span>
+                            }
+                           </div>
                     </div>
 
                     <div className={styles.links}>

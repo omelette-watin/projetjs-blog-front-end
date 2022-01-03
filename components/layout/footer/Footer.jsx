@@ -62,7 +62,7 @@ function Footer() {
                         <a>Blog</a>
                     </Link>
                     <a href="#">Devenir auteur</a>
-                    <Link href={"/about"}>
+                    <Link href={"/#about"}>
                         <a>À propos</a>
                     </Link>
 
@@ -87,7 +87,7 @@ function Footer() {
                 </div>
             </div>
             <div className={styles.signature}>
-               Coded with <strong>❤</strong> by <a href="https://github.com/omelette-watin" target={"_blank"}>Omelette</a>
+               Coded with 💖 by <a href="https://github.com/omelette-watin" target={"_blank"}>Omelette</a>
             </div>
         </footer>
     )

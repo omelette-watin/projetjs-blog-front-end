@@ -27,8 +27,13 @@ const Navbar = ({user, active}) => {
                 </Link>
             </li>
             <li>
-                <Link href={"/users"}>
-                    <a className={(active === "Utilisateurs") ? styles.active : null}>Utilisateurs</a>
+                <Link href={"/doc/api"}>
+                    <a className={(active === "API Reference") ? styles.active : null}>Open API</a>
+                </Link>
+            </li>
+            <li>
+                <Link href={"/doc"}>
+                    <a className={(active === "Documentation") ? styles.active : null}>Docs</a>
                 </Link>
             </li>
             {
@@ -41,11 +46,6 @@ const Navbar = ({user, active}) => {
 
                     : null
             }
-            <li>
-                <Link href={"/about"}>
-                    <a className={(active === "À propos") ? styles.active : null}>À propos</a>
-                </Link>
-            </li>
         </>
     )
 

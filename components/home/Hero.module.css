@@ -15,6 +15,10 @@
     margin-top: 3rem;
 }
 
+.intro h1 {
+    font-weight: 800;
+}
+
 .intro h1 strong {
     color: var(--limeGreen);
     font-weight: unset;
@@ -34,6 +38,10 @@
 .users strong {
     color: var(--limeGreen);
     font-weight: 700;
+}
+
+.red {
+    color: red;
 }
 
 .counter {

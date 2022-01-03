@@ -1,7 +1,7 @@
-const About = () => {
+const Api = () => {
     return (
         <div>
-            <h1>À propos de nous</h1>
+            <h1>API Reference</h1>
         </div>
     )
 }
@@ -9,9 +9,9 @@ const About = () => {
 export async function getStaticProps(context){
     return {
         props: {
-            title: "À propos"
+            title: "API Reference"
         }
     }
 }
 
-export default About
+export default Api
