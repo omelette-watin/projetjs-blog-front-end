@@ -20,7 +20,7 @@ const Hero  = () => {
                     <img src="/images/ico.svg" alt=""/>
                 </div>
                 <div className={styles.intro}>
-                    <h1>Votre  <strong>Opinion</strong> Compte</h1>
+                    <h1>Votre  <strong>Opinion</strong> compte</h1>
                     <div className={styles.content}>
                         <p className={styles.pitch}>
                             Cur tabes potus? Neuter bursa saepe tractares tumultumque est. Sectam ridetiss, tanquam regius luna.

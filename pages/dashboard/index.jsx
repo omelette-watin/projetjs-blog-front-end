@@ -13,7 +13,7 @@ export async function getStaticProps(context){
     return {
         props: {
             protected: true,
-            title: "| Dashboard"
+            title: "Dashboard"
         }
     }
 }

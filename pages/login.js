@@ -1,6 +1,6 @@
 import LoginForm from '../components/forms/login/LoginForm'
 
-function Login() {
+const Login = () => {
 
     return (
         <div>
@@ -12,7 +12,7 @@ function Login() {
 export async function getStaticProps(context){
     return {
         props: {
-            title: "Connexion"
+            title: "Connexion",
         }
     }
 }

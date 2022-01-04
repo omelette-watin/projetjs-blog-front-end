@@ -53,9 +53,8 @@
 
 /* Buttons */
 .btn {
-    position: relative;
     display: inline-block;
-    border: 0;
+    border: none;
     cursor: pointer;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.24);
     transition: all 200ms ease-in-out;
@@ -108,5 +107,38 @@
 @media screen and (max-width: 63.9375em) {
     .hide_for_mobile {
         display: none;
+    }
+}
+
+/* animations */
+.bounce {
+    animation-name: bounce;
+    animation-duration: .5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0px);
+    }
+    37% {
+        transform: translateX(5px);
+    }
+    55% {
+        transform: translateX(-5px);
+    }
+    73% {
+        transform: translateX(4px);
+    }
+    82% {
+        transform: translateX(-4px);
+    }
+    91% {
+        transform: translateX(2px);
+    }
+    96% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(0px);
     }
 }

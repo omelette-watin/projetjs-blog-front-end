@@ -1,7 +1,9 @@
-function Register() {
+import RegisterForm from "../components/forms/register/RegisterForm"
+
+const Register = () => {
     return (
         <div>
-            <h1>S'inscrire</h1>
+            <RegisterForm/>
         </div>
     )
 }
