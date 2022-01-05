@@ -1,4 +1,4 @@
-import RegisterForm from "../components/forms/register/RegisterForm"
+import RegisterForm from "../components/forms/RegisterForm"
 
 const Register = () => {
     return (
@@ -11,7 +11,8 @@ const Register = () => {
 export async function getStaticProps(context){
     return {
         props: {
-            title: "Inscription"
+            title: "Inscription",
+            layout: false
         }
     }
 }

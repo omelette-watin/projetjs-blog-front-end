@@ -1,4 +1,4 @@
-import LoginForm from '../components/forms/login/LoginForm'
+import LoginForm from '../components/forms/LoginForm'
 
 const Login = () => {
 
@@ -13,6 +13,7 @@ export async function getStaticProps(context){
     return {
         props: {
             title: "Connexion",
+            layout: false
         }
     }
 }

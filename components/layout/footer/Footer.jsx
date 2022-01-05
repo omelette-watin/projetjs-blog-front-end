@@ -4,7 +4,7 @@ import Link from "next/link"
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className={`${styles.container} container`}>
+            <div className={`${styles.container} container p-x`}>
                 <a className={styles.logo} href="#">
                     <img src="/images/logo.svg" alt={"Unicorn's logo"}/>
                 </a>
@@ -70,14 +70,14 @@ function Footer() {
 
                 <div className={`${styles.links} ${styles.col2}`}>
                     <a href="#">FAQ</a>
-                    <a href="#">Conditions générales</a>
+                    <a href="#">Conditions</a>
                     <a href="#">Confidentialité</a>
 
                 </div>
 
                 <div className={styles.cta}>
-                    <Link href={"/login"}>
-                        <a className={`${styles.btn} btn gradient`}>Se connecter</a>
+                    <Link href={"/register"}>
+                        <a className={`${styles.btn} btn gradient`}>Créer un compte</a>
                     </Link>
 
                 </div>

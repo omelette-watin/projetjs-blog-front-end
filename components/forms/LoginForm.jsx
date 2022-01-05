@@ -1,8 +1,8 @@
-import styles from "../SignForms.module.css"
+import styles from "./SignForms.module.css"
 import { useRouter } from 'next/router'
 import { useState } from "react"
 import Link from "next/link"
-import loginUser from "../../../services/users/loginUser"
+import loginUser from "../../services/users/loginUser"
 
 const LoginForm = () => {
     const router = useRouter()
@@ -40,10 +40,19 @@ const LoginForm = () => {
 
     return (
         <div className={styles.form_wrapper}>
-            <form onSubmit={handleSubmit} className={`${styles.form} container p-x`}>
+            <div className={styles.logo_mobile}>
+                <img src="/images/logo.svg" alt=""/>
+                <h3>Your <strong>Opinion</strong> matters !</h3>
+            </div>
+            <div className={styles.logo_desktop}>
+                <img src="/images/logo.svg" alt=""/>
+                <h3>Your <strong>Opinion</strong> matters !</h3>
+            </div>
+            <form onSubmit={handleSubmit} className={`${styles.form} p-x`}>
                 <div className={styles.headings}>
                     <h2>Connection</h2>
                 </div>
+
 
                 {formData.error && <div id={"error"} className={`${formData.bounce ? "bounce" : null } ${styles.error}`}>{formData.error}</div>}
 
@@ -81,15 +90,19 @@ const LoginForm = () => {
                             <a>Créez-en un !</a>
                         </Link>
                     </p>
-
                 </div>
-
+                <div className={styles.home}>
+                    <Link href={"/"}>
+                        <a>Revenir sur le site</a>
+                    </Link>
+                </div>
             </form>
+            <div className={`${styles.circle} ${styles.large}`}>
+            </div>
+            <div className={`${styles.circle} ${styles.small}`}>
+            </div>
         </div>
-
     )
-
-
 }
 
 export default LoginForm

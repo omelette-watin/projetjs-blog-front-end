@@ -1,8 +1,8 @@
-import styles from "../SignForms.module.css"
+import styles from "./SignForms.module.css"
 import Link from "next/link"
 import { useRouter } from 'next/router'
 import { useState } from "react"
-import registerUser from "../../../services/users/registerUser"
+import registerUser from "../../services/users/registerUser"
 
 const RegisterForm = () => {
     const router = useRouter()
@@ -53,7 +53,15 @@ const RegisterForm = () => {
 
     return (
         <div className={styles.form_wrapper}>
-            <form onSubmit={handleSubmit} className={`${styles.form} container p-x`}>
+            <div className={styles.logo_mobile}>
+                <img src="/images/logo.svg" alt=""/>
+                <h3>Your <strong>Opinion</strong> matters !</h3>
+            </div>
+            <div className={styles.logo_desktop}>
+                <img src="/images/logo.svg" alt=""/>
+                <h3>Your <strong>Opinion</strong> matters !</h3>
+            </div>
+            <form onSubmit={handleSubmit} className={`${styles.form} p-x`}>
                 <div className={styles.headings}>
                     <h2>Inscription</h2>
                 </div>
@@ -67,7 +75,7 @@ const RegisterForm = () => {
                     name={"username"}
                     id={"username"}
                     required={true}
-                    placeholder={"Nom d'utilisateur (visible par tous)"}
+                    placeholder={"Nom d'utilisateur (visible)"}
                     autoComplete={"username"}
                 />
 
@@ -79,7 +87,7 @@ const RegisterForm = () => {
                     id={"email"}
                     required={true}
                     placeholder={"Adresse e-mail"}
-                    autoComplete={"username"}
+                    autoComplete={"email"}
                 />
 
                 <input
@@ -90,7 +98,6 @@ const RegisterForm = () => {
                     id={"password"}
                     required={true}
                     placeholder={"Mot de passe"}
-                    autoComplete={"password"}
                 />
 
                 <input
@@ -101,12 +108,11 @@ const RegisterForm = () => {
                     id={"confirmPassword"}
                     required={true}
                     placeholder={"Confirmer le mot de passe"}
-                    autoComplete={false}
                 />
 
                 <div className={styles.links}>
                     <button disabled={formData.isLoading} type="submit" className={`${styles.login_btn} btn`}>
-                        {formData.isLoading ? "Envoi ..." : "Créer le compte"}
+                        {formData.isLoading ? "Envoi ..." : "Créer mon compte"}
                     </button>
                     <p>
                         Vous avez déjà un compte ?
@@ -115,7 +121,16 @@ const RegisterForm = () => {
                         </Link>
                     </p>
                 </div>
+                <div className={styles.home}>
+                    <Link href={"/"}>
+                        <a>Revenir sur le site</a>
+                    </Link>
+                </div>
             </form>
+            <div className={`${styles.circle} ${styles.large}`}>
+            </div>
+            <div className={`${styles.circle} ${styles.small}`}>
+            </div>
         </div>
     )
 }
