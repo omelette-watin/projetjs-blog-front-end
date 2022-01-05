@@ -41,7 +41,7 @@ const Post = ({id, title, text, author, date}) => (
             {text}
         </div>
         <div className={styles.author}>
-            {author}
+            @{author}
         </div>
     </div>
 )
