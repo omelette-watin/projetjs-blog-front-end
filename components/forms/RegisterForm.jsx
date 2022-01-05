@@ -105,7 +105,7 @@ const RegisterForm = () => {
                 <input
                     className={formData.testUsername ? styles.red_input : null}
                     value={formData.username}
-                    onChange={(e) => setFormData({ ...formData, username: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, username: e.target.value, testUsername: ""})}
                     type="text"
                     name={"username"}
                     id={"username"}
@@ -117,7 +117,7 @@ const RegisterForm = () => {
                 <input
                     className={formData.testEmail ? styles.red_input : null}
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value, testEmail: ""})}
                     type="email"
                     name={"email"}
                     id={"email"}
@@ -129,7 +129,7 @@ const RegisterForm = () => {
                 <input
                     className={formData.testPasswordMsg ? styles.red_input : null}
                     value={formData.password}
-                    onChange={(e) => setFormData({ ...formData, password: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, password: e.target.value, testPasswordMsg: ""})}
                     type="password"
                     name={"password"}
                     id={"password"}
@@ -141,7 +141,7 @@ const RegisterForm = () => {
                 <input
                     className={formData.testConfirmMsg ? styles.red_input : null}
                     value={formData.confirmPassword}
-                    onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value, testConfirmMsg: ""})}
                     type="password"
                     name={"confirmPassword"}
                     id={"confirmPassword"}
