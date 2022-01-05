@@ -21,13 +21,15 @@
 }
 
 .dev_wrapper a {
-    margin: 0;
+    display: block;
+    margin: 0.5rem 0 0;
     text-decoration: underline;
     color: var(--darkBlue);
 }
 
 .dev_wrapper a:hover {
     color: var(--white);
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 350px) {
