@@ -18,29 +18,44 @@ const Navbar = ({user, active}) => {
         <>
             <li>
                 <Link href={"/"}>
-                    <a className={(active === undefined) ? styles.active : null} onClick={() => setToggleMenu(false)}>Accueil</a>
+                    <a className={(active === undefined) ? styles.active : null} onClick={() => {
+                        setToggleMenu(false);
+                        document.querySelector("body").classList.remove("no-scroll")
+                    }}>Accueil</a>
                 </Link>
             </li>
             <li>
                 <Link href={"/blog"}>
-                    <a className={(active === "Blog") ? styles.active : null} onClick={() => setToggleMenu(false)}>Blog</a>
+                    <a className={(active === "Blog") ? styles.active : null} onClick={() => {
+                        setToggleMenu(false);
+                        document.querySelector("body").classList.remove("no-scroll")
+                    }}>Blog</a>
                 </Link>
             </li>
             <li>
                 <Link href={"/doc"}>
-                    <a className={(active === "Documentation") ? styles.active : null} onClick={() => setToggleMenu(false)}>Docs</a>
+                    <a className={(active === "Documentation") ? styles.active : null} onClick={() => {
+                        setToggleMenu(false);
+                        document.querySelector("body").classList.remove("no-scroll")
+                    }}>Docs</a>
                 </Link>
             </li>
             <li>
                 <Link href={"/doc/api"}>
-                    <a className={(active === "API Reference") ? styles.active : null} onClick={() => setToggleMenu(false)}>Open API</a>
+                    <a className={(active === "API Reference") ? styles.active : null} onClick={() => {
+                        setToggleMenu(false);
+                        document.querySelector("body").classList.remove("no-scroll")
+                    }}>Open API</a>
                 </Link>
             </li>
             {
                 user ?
                     <li>
                         <Link href={"/dashboard"}>
-                            <a className={(active === "Dashboard") ? styles.active : null} onClick={() => setToggleMenu(false)}>Dashboard</a>
+                            <a className={(active === "Dashboard") ? styles.active : null} onClick={() => {
+                                setToggleMenu(false);
+                                document.querySelector("body").classList.remove("no-scroll")
+                            }}>Dashboard</a>
                         </Link>
                     </li>
 
