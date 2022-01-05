@@ -37,6 +37,20 @@
     border-radius: 0.375rem;
 }
 
+.form textarea {
+    width: 20.625rem;
+    max-width: 78vw;
+    padding: 1rem  1rem;
+    margin: 1rem auto 0;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: none;
+    color: #1d2129;;
+    background-color: var(--white);
+    border: 1px solid #dddfe2;
+    border-radius: 0.375rem;
+}
+
 .headings {
     text-align: center;
     margin-bottom: 2rem;
@@ -178,6 +192,24 @@
     font-size: 0.7rem;
 }
 
+.rating {
+    margin: 1rem auto 0;
+}
+
+.star {
+    color: #ff9933;
+    cursor: pointer;
+}
+
+.star_wrapper {
+    width: 20.625rem;
+    max-width: 78vw;
+    padding: 0 1rem;
+    margin: 0 auto 0;
+    font-size: 4rem;
+    text-align: center;
+}
+
 @media screen and (max-width: 63.9375em) {
     .logo_desktop {
         display: none;
@@ -213,5 +245,9 @@
 
     .logo_desktop {
         display: none;
+    }
+
+    .star_wrapper {
+        font-size: 3rem;
     }
 }

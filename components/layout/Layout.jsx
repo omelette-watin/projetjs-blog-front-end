@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Navbar from "./navbar/Navbar"
 import Footer from "./footer/Footer"
+import Link from "next/link"
 import { useUser } from "../user"
 import styles from './Layout.module.css'
 
@@ -14,6 +15,11 @@ function Layout({ children, title }) {
             </Head>
             <div className={styles.dev_wrapper}>
                 👷 <span>Ce site est encore en développement</span> 👷
+                <p>
+                    <Link href={"/report"}>
+                        <a>Laisser un commentaire</a>
+                    </Link>
+                </p>
             </div>
             <Navbar user={user} active={title} />
             <main style={{minHeight: '60vh'}}>{children}</main>
