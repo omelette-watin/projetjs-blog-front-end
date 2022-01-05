@@ -1,0 +1,18 @@
+.dev_wrapper {
+    padding: 0.8rem 0.3rem;
+    width: 100vw;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--limeGreen);
+}
+
+.dev_wrapper span {
+    margin: 0 0.4rem;
+}
+
+@media screen and (max-width: 350px) {
+    .dev_wrapper {
+        font-size: 0.8rem;
+    }
+}
