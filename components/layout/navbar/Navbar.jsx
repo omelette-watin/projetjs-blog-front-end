@@ -106,7 +106,7 @@ const Navbar = ({user, active}) => {
                             size={27}
                             onClick={() => {
                                 setToggleMenu(false);
-                                document.querySelector("body").classList.toggle("no-scroll")
+                                document.querySelector("body").classList.remove("no-scroll")
                             }}
                         />
                         : <RiMenuLine
@@ -114,7 +114,7 @@ const Navbar = ({user, active}) => {
                             size={27}
                             onClick={() => {
                                 setToggleMenu(true);
-                                document.querySelector("body").classList.toggle("no-scroll")
+                                document.querySelector("body").classList.add("no-scroll")
                             }}
                         />
                     }
