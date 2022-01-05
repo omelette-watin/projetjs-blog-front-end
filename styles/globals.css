@@ -7,6 +7,7 @@
     --lightGrayishBlue: hsl(220, 16%, 96%);
     --veryLightGray: hsl(0, 0%, 98%);
     --white: hsl(0, 0%, 100%);
+    --red: #d93025;
 
     /* Font Sizes*/
     --font-sm: 0.875rem;

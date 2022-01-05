@@ -20,7 +20,10 @@ const LoginForm = () => {
 
         setFormData({ ...formData, isLoading: true, bounce: false })
 
-        loginUser(formData)
+        loginUser({
+            username: formData.username,
+            password: formData.password
+        })
             .then((res) => {
                 const token = res.data.token
                 localStorage.setItem("token", token)
@@ -57,6 +60,7 @@ const LoginForm = () => {
                 {formData.error && <div id={"error"} className={`${formData.bounce ? "bounce" : null } ${styles.error}`}>{formData.error}</div>}
 
                 <input
+                    className={formData.error ? styles.red_input : null}
                     value={formData.username}
                     onChange={(e) => setFormData({ ...formData, username: e.target.value })}
                     type="text"
@@ -69,6 +73,7 @@ const LoginForm = () => {
 
 
                 <input
+                    className={formData.error ? styles.red_input : null}
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                     type="password"

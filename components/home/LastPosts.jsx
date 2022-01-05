@@ -5,15 +5,15 @@ import Link from "next/link"
 const LastPostsData = [
     {
         id: "1",
-        title: "Meta, un flop ?",
-        author: "SuperOmelette",
+        title: "On dit chocolatine",
+        author: "SuperSudiste",
         publicationDate: "2021-12-30T15:03:32.013+00:00",
         text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
     },
     {
         id: "2",
-        title: "Matrix est honteux",
-        author: "Magali Watin",
+        title: "JS > All",
+        author: "Omelette",
         publicationDate: "2021-11-24T15:13:32.013+00:00",
         text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
     },
@@ -27,7 +27,7 @@ const LastPostsData = [
 ]
 
 const Post = ({id, title, text, author, date}) => (
-    <div className={styles.post} key={id}>
+    <div className={styles.post}>
         <Link href={`/blog/posts/${id}`}>
             <a/>
         </Link>
@@ -58,7 +58,7 @@ const LastPosts = () => {
                 <div className={styles.content}>
                     {
                         LastPostsData.map((post) => (
-                            <Post title={post.title} text={post.text} author={post.author} date={post.publicationDate} id={post.id}/>
+                            <Post title={post.title} text={post.text} author={post.author} date={post.publicationDate} id={post.id} key={post.id}/>
                         ))
                     }
                 </div>

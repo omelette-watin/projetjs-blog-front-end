@@ -43,7 +43,7 @@ const Features = () => {
                 </div>
                 <div className={styles.content}>
                     {FeaturesData.map((feature) => (
-                        <Feature text={feature.text} title={feature.title} image={feature.image}/>
+                        <Feature text={feature.text} title={feature.title} image={feature.image} key={feature.title}/>
                     ))}
                 </div>
             </div>
