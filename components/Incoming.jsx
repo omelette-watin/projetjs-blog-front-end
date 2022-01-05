@@ -1,13 +1,15 @@
-import styles from "./NotFoundError.module.css"
+import styles from "./Incoming.module.css"
 import Link from "next/link"
 import { RiArrowGoBackFill } from "react-icons/ri"
 
-const NotFoundError = () => {
+
+const Incoming = ({ page }) => {
     return (
-        <div className={styles.error_wrapper}>
-            <div className={`${styles.error} container p-all`}>
-                <h1>Oups ...</h1>
-                <p>La page demandée n'existe pas</p>
+        <div className={styles.incoming_wrapper}>
+            <div className={`${styles.incoming} container p-all`}>
+                <h1>Bientôt ici : la page <strong>{page}</strong></h1>
+
+                <p>Merci de votre patience 💖</p>
 
                 <div className={styles.links}>
                     <Link href={"/"}>
@@ -19,8 +21,7 @@ const NotFoundError = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 
-export default NotFoundError
+export default Incoming

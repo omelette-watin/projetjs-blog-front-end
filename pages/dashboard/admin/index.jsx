@@ -1,11 +1,11 @@
 import { useUser } from "../../../components/user"
+import Incoming from "../../../components/Incoming"
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ title }) => {
     const { user } = useUser()
     return (
         <div>
-            <h1>Admin Dashboard de {user.username}</h1>
-            <p>{user.role}</p>
+            <Incoming page={title} />
         </div>
     )
 }
@@ -14,7 +14,7 @@ export async function getStaticProps(context){
     return {
         props: {
             protected: true,
-            title: "| Dashboard",
+            title: "Dashboard Admin",
             userTypes: ['admin']
         }
     }

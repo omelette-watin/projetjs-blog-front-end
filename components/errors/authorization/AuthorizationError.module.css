@@ -1,5 +1,6 @@
 .error_wrapper {
     background-color: var(--veryLightGray);
+    min-height: calc(100vh - 18rem);
 }
 
 .error {
@@ -34,6 +35,11 @@
     color: var(--darkBlue);
     text-decoration: underline;
 }
+
+.links .back:hover {
+    color: var(--limeGreen);
+}
+
 
 .links .back p {
     margin: 0 0 0 0.7rem;

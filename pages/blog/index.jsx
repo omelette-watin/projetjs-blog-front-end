@@ -1,8 +1,9 @@
+import Incoming from "../../components/Incoming"
 
-const Blog = () => {
+const Blog = ({ title }) => {
     return (
         <div>
-            <h1>Blog</h1>
+            <Incoming page={title} />
         </div>
     )
 }

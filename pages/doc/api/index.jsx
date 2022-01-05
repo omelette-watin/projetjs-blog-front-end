@@ -1,7 +1,9 @@
-const Api = () => {
+import Incoming from "../../../components/Incoming";
+
+const Api = ({ title }) => {
     return (
         <div>
-            <h1>API Reference</h1>
+            <Incoming page={title} />
         </div>
     )
 }

@@ -27,13 +27,13 @@ const Navbar = ({user, active}) => {
                 </Link>
             </li>
             <li>
-                <Link href={"/doc/api"}>
-                    <a className={(active === "API Reference") ? styles.active : null}>Open API</a>
+                <Link href={"/doc"}>
+                    <a className={(active === "Documentation") ? styles.active : null}>Docs</a>
                 </Link>
             </li>
             <li>
-                <Link href={"/doc"}>
-                    <a className={(active === "Documentation") ? styles.active : null}>Docs</a>
+                <Link href={"/doc/api"}>
+                    <a className={(active === "API Reference") ? styles.active : null}>Open API</a>
                 </Link>
             </li>
             {

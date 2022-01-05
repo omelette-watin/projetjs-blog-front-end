@@ -1,10 +1,11 @@
 import { useUser } from "../../components/user"
+import Incoming from "../../components/Incoming"
 
-const Dashboard = () => {
+const Dashboard = ({ title }) => {
     const { user } = useUser()
     return (
         <div>
-            <h1>Dashboard de {user.username}</h1>
+            <Incoming page={title} />
         </div>
     )
 }

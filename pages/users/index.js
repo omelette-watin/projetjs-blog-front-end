@@ -1,7 +1,9 @@
-function Users() {
+import Incoming from "../../components/Incoming";
+
+const Users = ({ title }) => {
     return (
         <div>
-            <h1>Tous les utilisateurs</h1>
+            <Incoming page={title} />
         </div>
     )
 }
