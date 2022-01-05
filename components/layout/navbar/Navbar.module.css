@@ -99,8 +99,9 @@
     left: 0;
     right: 0;
     height: 100vh;
+    padding-top: 18vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     backdrop-filter: blur(0.2rem);
