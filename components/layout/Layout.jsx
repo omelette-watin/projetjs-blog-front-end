@@ -8,7 +8,7 @@ import styles from './Layout.module.css'
 function Layout({ children, title }) {
     const { user } = useUser()
     return (
-        <div>
+        <div className={styles.layout_wrapper}>
             <Head>
                 <title>{title ?  title + " - " : null} Unicorn's Blog </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />

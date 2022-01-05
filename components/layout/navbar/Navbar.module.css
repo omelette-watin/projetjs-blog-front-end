@@ -1,10 +1,8 @@
 .header {
-    position: relative;
     z-index: 1;
 }
 
 .navbar {
-    position: relative;
     padding-top: 1.0625rem;
     padding-bottom: 0.85rem;
     background-color: var(--white);
@@ -83,22 +81,35 @@
 .mobile_menu {
     display: none;
     align-items: center;
-    position: relative;
     margin-left: 1rem;
+}
+
+.mobile_menu_close {
+    z-index: 102;
 }
 
 .mobile_menu_container {
     position: absolute;
-    top: 40px;
-    right: 5px;
+    inset: 0;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(0.2rem);
+    -webkit-backdrop-filter: blur(0.2rem);
+    z-index: 99;
+}
+
+.mobile_menu_content {
+    display: flex;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     gap: 2rem;
-
     margin-top: 1rem;
-    min-width: 210px;
-    padding: 2rem 1rem 1rem;
+    min-width: 240px;
+    padding: 2rem 1rem 1.5rem;
     background: var(--white);
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);

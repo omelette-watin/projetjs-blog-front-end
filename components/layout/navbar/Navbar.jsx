@@ -18,29 +18,29 @@ const Navbar = ({user, active}) => {
         <>
             <li>
                 <Link href={"/"}>
-                    <a className={(active === undefined) ? styles.active : null}>Accueil</a>
+                    <a className={(active === undefined) ? styles.active : null} onClick={() => setToggleMenu(false)}>Accueil</a>
                 </Link>
             </li>
             <li>
                 <Link href={"/blog"}>
-                    <a className={(active === "Blog") ? styles.active : null}>Blog</a>
+                    <a className={(active === "Blog") ? styles.active : null} onClick={() => setToggleMenu(false)}>Blog</a>
                 </Link>
             </li>
             <li>
                 <Link href={"/doc"}>
-                    <a className={(active === "Documentation") ? styles.active : null}>Docs</a>
+                    <a className={(active === "Documentation") ? styles.active : null} onClick={() => setToggleMenu(false)}>Docs</a>
                 </Link>
             </li>
             <li>
                 <Link href={"/doc/api"}>
-                    <a className={(active === "API Reference") ? styles.active : null}>Open API</a>
+                    <a className={(active === "API Reference") ? styles.active : null} onClick={() => setToggleMenu(false)}>Open API</a>
                 </Link>
             </li>
             {
                 user ?
                     <li>
                         <Link href={"/dashboard"}>
-                            <a className={(active === "Dashboard") ? styles.active : null}>Dashboard</a>
+                            <a className={(active === "Dashboard") ? styles.active : null} onClick={() => setToggleMenu(false)}>Dashboard</a>
                         </Link>
                     </li>
 
@@ -100,35 +100,52 @@ const Navbar = ({user, active}) => {
                             </div>
                     }
                     {toggleMenu
-                        ? <RiCloseLine color={"var(--darkBlue)"} size={27} onClick={() => setToggleMenu(false)} />
-                        : <RiMenuLine color={"var(--darkBlue)"} size={27} onClick={() => setToggleMenu(true)} />
+                        ? <RiCloseLine
+                            color={"var(--darkBlue)"}
+                            className={styles.mobile_menu_close}
+                            size={27}
+                            onClick={() => {
+                                setToggleMenu(false);
+                                document.querySelector("body").classList.toggle("no-scroll")
+                            }}
+                        />
+                        : <RiMenuLine
+                            color={"var(--darkBlue)"}
+                            size={27}
+                            onClick={() => {
+                                setToggleMenu(true);
+                                document.querySelector("body").classList.toggle("no-scroll")
+                            }}
+                        />
                     }
                     {toggleMenu && (
                         <div className={styles.mobile_menu_container}>
-                            <ul className={styles.mobile_links}>
-                                {links}
-                            </ul>
-                            {
-                                user ?
+                            <div className={styles.mobile_menu_content}>
+                                <ul className={styles.mobile_links}>
+                                    {links}
+                                </ul>
+                                {
+                                    user ?
 
-                                <div className={styles.mobile_sign}>
-                                    <a onClick={logout} className={`${styles.little} ${styles.dc}`}>
-                                        <RiLogoutBoxLine color={"var(--darkblue)"} size={27}/>
-                                        <p>Se déconnecter</p>
-                                    </a>
-                                </div>
+                                    <div className={styles.mobile_sign}>
+                                        <a onClick={logout} className={`${styles.little} ${styles.dc}`}>
+                                            <RiLogoutBoxLine color={"var(--darkblue)"} size={27}/>
+                                            <p>Se déconnecter</p>
+                                        </a>
+                                    </div>
 
-                                :
+                                    :
 
-                                <div className={styles.mobile_sign}>
-                                    <Link href={"/login"}>
-                                        <a className={styles.little}>Se connecter</a>
-                                    </Link>
-                                    <Link href={"/register"} >
-                                        <a className={`btn gradient`}>S'inscrire</a>
-                                    </Link>
-                                </div>
-                            }
+                                    <div className={styles.mobile_sign}>
+                                        <Link href={"/login"}>
+                                            <a className={styles.little}>Se connecter</a>
+                                        </Link>
+                                        <Link href={"/register"} >
+                                            <a className={`btn gradient`}>S'inscrire</a>
+                                        </Link>
+                                    </div>
+                                }
+                            </div>
                         </div>
                     )}
 

@@ -124,7 +124,7 @@ const ReportForm = () => {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     id={"message"}
                     required={false}
-                    placeholder={"Laisser un commentaire"}
+                    placeholder={"Laisser un commentaire (facultatif)"}
                     cols={"10"}
                     rows={"5"}
 
