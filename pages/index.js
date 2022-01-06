@@ -15,7 +15,7 @@ const Home = ({ countUser }) => {
     )
 }
 
-export async function getStaticProps(context){
+export async function getServerSideProps() {
     const countUser = await countAllUser()
     return {
         props: {
