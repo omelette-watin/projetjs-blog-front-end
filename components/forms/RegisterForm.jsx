@@ -2,7 +2,7 @@ import styles from "./SignForms.module.css"
 import Link from "next/link"
 import { useRouter } from 'next/router'
 import { useState } from "react"
-import registerUser from "../../services/users/registerUser"
+import registerUser from "../../services/auth/registerUser"
 
 const eightChar = new RegExp("(?=.{8,})")
 

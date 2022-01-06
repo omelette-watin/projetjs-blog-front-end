@@ -2,7 +2,7 @@ import styles from "./SignForms.module.css"
 import { useRouter } from 'next/router'
 import { useState } from "react"
 import Link from "next/link"
-import loginUser from "../../services/users/loginUser"
+import loginUser from "../../services/auth/loginUser"
 
 const LoginForm = () => {
     const router = useRouter()

@@ -3,15 +3,16 @@ import { useUser } from "../user"
 import Link from "next/link"
 import { useCountUp } from "react-countup"
 
-const Hero  = () => {
+const Hero  = ({ countUser }) => {
     const { user } = useUser()
+    console.log(countUser)
     useCountUp({
         ref: "counter",
         start: 0,
-        end: 1338,
+        end: user ? countUser - 1 : countUser,
         delay: 0,
         suffix: " personnes",
-        duration: 3
+        duration: countUser/4
     })
     return (
         <section className={styles.hero}>
@@ -32,9 +33,9 @@ const Hero  = () => {
 
 
                             <div>
-                                nous ont rejoint.
+                                nous ont déjà rejoint.
                                 {user
-                                    ?  <span> Merci à <strong>vous</strong> 💖 !</span>
+                                    ?  <span> Et vous <strong>{user.username}</strong> bien sûr 💖 !</span>
                                     :  <span> Pourquoi pas <strong><Link href={"/register"}><a>vous</a></Link></strong> ?</span>
                                 }
                             </div>
