@@ -65,7 +65,7 @@ const Navbar = ({user, active}) => {
     )
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} id={"header"}>
             <nav className={`${styles.navbar} flex ai-c jc-sb container p-x`}>
                 <div className={styles.logo}>
                     <Link href={"/"}>

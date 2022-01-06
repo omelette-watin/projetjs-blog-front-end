@@ -24,6 +24,8 @@ function Layout({ children, title }) {
             <Navbar user={user} active={title} />
             <main style={{minHeight: '60vh'}}>{children}</main>
             <Footer/>
+            <script src={"/scripts/header.js"}>
+            </script>
         </div>
     )
 }

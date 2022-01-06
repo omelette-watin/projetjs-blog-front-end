@@ -1,5 +1,7 @@
 .header {
     z-index: 1;
+    background-color: var(--white);
+    transition: transform 200ms ease-in-out;
 }
 
 .navbar {
