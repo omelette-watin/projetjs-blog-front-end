@@ -1,8 +1,7 @@
-import axios from "axios";
-import domain from "../domain"
+import api from "../api";
 
 const registerUser = async (data) => {
-    return  await axios.post(`${domain}/auth/signup`, data)
+    return await api.post('/auth/signup', data)
 }
 
 export default registerUser
