@@ -2,10 +2,11 @@ import styles from './Footer.module.css'
 import Link from "next/link"
 import {RiMoonFill, RiSunFill} from "react-icons/ri"
 import {useTheme} from "next-themes"
+import {useUser} from "../../user";
 
 function Footer() {
-    const { theme, setTheme } = useTheme()
-    const { systemTheme } = useTheme()
+    const { user } = useUser()
+    const { theme, setTheme, systemTheme } = useTheme()
     return (
         <footer className={styles.footer}>
             <div className={`${styles.container} container p-x`}>
@@ -83,7 +84,28 @@ function Footer() {
                     <Link href={"/blog"}>
                         <a>Blog</a>
                     </Link>
-                    <a href="#">Devenir auteur</a>
+                    {!user
+                        ? <Link href={"/login"}>
+                            <a>Devenir auteur</a>
+                        </Link>
+                        : null
+                    }
+                    {(user && user.role === "author")
+                        ? <Link href={"/dashboard/request/admin"}>
+                            <a>Devenir administrateur</a>
+                        </Link>
+                        : null
+                    }
+                    {(user && user.role === "reader")
+                        ? <Link href={"/dashboard/request/author"}>
+                            <a>Devenir pd</a>
+                        </Link>
+                        : null
+                    }
+                    {(user && user.role === "admin")
+                        ? <a>Devenir auteur</a>
+                        : null
+                    }
                     <Link href={"/#about"}>
                         <a>À propos</a>
                     </Link>

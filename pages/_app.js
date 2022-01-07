@@ -41,11 +41,19 @@ function App({ Component, pageProps }) {
     }
 
     if (pageProps.protected && user && pageProps.userTypes && pageProps.userTypes.indexOf(user.role) === -1) {
-        return <ThemeProvider><Layout><AuthorizationError/></Layout></ThemeProvider>
+        return (
+            <UserContext.Provider value={user}>
+                <ThemeProvider><Layout><AuthorizationError/></Layout></ThemeProvider>
+            </UserContext.Provider>
+       )
     }
 
     if (pageProps.layout === false) {
-        return <ThemeProvider><Component {...pageProps} /></ThemeProvider>
+        return (
+            <UserContext.Provider value={user}>
+                <ThemeProvider><Layout><Component {...pageProps} /></Layout></ThemeProvider>
+            </UserContext.Provider>
+        )
     }
 
     return (

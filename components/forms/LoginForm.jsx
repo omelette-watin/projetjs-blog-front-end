@@ -86,8 +86,14 @@ const LoginForm = () => {
                 />
 
                 <div className={styles.links}>
-                    <button disabled={formData.isLoading} type="submit" className={`${styles.login_btn} btn`}>
-                        {formData.isLoading ? "Envoi ..." : "Se connecter"}
+                    <button
+                        disabled={formData.isLoading}
+                        type="submit"
+                        className={`${styles.login_btn} btn`}
+                    >
+                        {formData.isLoading
+                            ? "Envoi ..."
+                            : "Se connecter"}
                     </button>
                     <p>
                         Pas encore de compte ?
