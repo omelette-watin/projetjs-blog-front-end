@@ -112,7 +112,7 @@
 
 @supports not (backdrop-filter: blur(0.2rem)) {
     .mobile_menu_container {
-        background-color: rgba(87, 199, 117, 0.33);
+        background-color: rgba(93, 107, 93, 0.42);
     }
 }
 
