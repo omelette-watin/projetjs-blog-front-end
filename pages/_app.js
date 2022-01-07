@@ -51,7 +51,7 @@ function App({ Component, pageProps }) {
     if (pageProps.layout === false) {
         return (
             <UserContext.Provider value={user}>
-                <ThemeProvider><Layout><Component {...pageProps} /></Layout></ThemeProvider>
+                <ThemeProvider><Component {...pageProps} /></ThemeProvider>
             </UserContext.Provider>
         )
     }
