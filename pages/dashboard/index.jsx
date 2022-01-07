@@ -1,7 +1,6 @@
 import DashboardLayout from "../../components/dashboard/DashboardLayout";
 
 const Dashboard = () => {
-
     return (
         <DashboardLayout>
         </DashboardLayout>
