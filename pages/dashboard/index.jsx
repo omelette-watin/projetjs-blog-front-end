@@ -1,20 +1,10 @@
-import { useUser } from "../../components/user"
-import Incoming from "../../components/Incoming"
 import DashboardLayout from "../../components/dashboard/DashboardLayout";
 
-const Dashboard = ({ title }) => {
-    const { user } = useUser()
+const Dashboard = () => {
 
-    if (user.role === "admin") {
-        return (
-            <DashboardLayout>
-            </DashboardLayout>
-        )
-    }
     return (
-        <div>
-            <Incoming page={title} />
-        </div>
+        <DashboardLayout>
+        </DashboardLayout>
     )
 }
 
