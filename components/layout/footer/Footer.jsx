@@ -121,25 +121,23 @@ function Footer() {
 
                 <div className={styles.cta}>
                     Thème
-                    <div className={styles.theme}>
-                        {(theme === "system" && systemTheme === "dark")
-                            ? <RiSunFill  size={27} onClick={() => setTheme("light")} />
-                            : null
-                        }
-                        {(theme === "system" && systemTheme === "light")
-                            ? <RiMoonFill  size={27} onClick={() => setTheme("dark")} />
-                            : null
-                        }
-                        {(theme === "dark")
-                            ? <RiSunFill  size={27} onClick={() => setTheme("light")} />
-                            : null
-                        }
-                        {(theme === "light")
-                            ? <RiMoonFill  size={27} onClick={() => setTheme("dark")} />
-                            : null
-                        }
-                    </div>
 
+                    {(theme === "system" && systemTheme === "dark")
+                        ? <div className={styles.theme} onClick={() => setTheme("light")}><RiSunFill size={27} /></div>
+                        : null
+                    }
+                    {(theme === "system" && systemTheme === "light")
+                        ? <div className={styles.theme} onClick={() => setTheme("dark")} ><RiMoonFill  size={27} /></div>
+                        : null
+                    }
+                    {(theme === "dark")
+                        ? <div className={styles.theme} onClick={() => setTheme("light")} ><RiSunFill  size={27} /></div>
+                        : null
+                    }
+                    {(theme === "light")
+                        ? <div className={styles.theme} onClick={() => setTheme("dark")} ><RiMoonFill  size={27} /></div>
+                        : null
+                    }
 
                 </div>
 

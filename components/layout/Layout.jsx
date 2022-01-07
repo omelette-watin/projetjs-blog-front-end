@@ -2,11 +2,9 @@ import Head from "next/head"
 import Navbar from "./navbar/Navbar"
 import Footer from "./footer/Footer"
 import Link from "next/link"
-import { useUser } from "../user"
 import styles from './Layout.module.css'
 
 const Layout = ({ children, title }) => {
-    const { user } = useUser()
     return (
         <div className={styles.layout_wrapper}>
             <Head>
@@ -21,7 +19,7 @@ const Layout = ({ children, title }) => {
                     </Link>
                 </p>
             </div>
-            <Navbar user={user} active={title} />
+            <Navbar active={title} />
             <main style={{minHeight: '60vh'}}>{children}</main>
             <Footer/>
             <script src={"/scripts/header.js"}>

@@ -86,7 +86,7 @@ body {
     font-size: var(--font-sm);
     font-family: "Public Sans", sans-serif;
     color: var(--colorGrayishBlue);
-    background: var(--bgWhite);
+    background: var(--white);
 }
 
 
@@ -119,7 +119,7 @@ h4 {
     margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 0;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.15;
     color: var(--colorDarkBlue);
 }

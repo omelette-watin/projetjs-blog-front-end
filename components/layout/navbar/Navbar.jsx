@@ -2,10 +2,12 @@ import styles from './Navbar.module.css'
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
+import { useUser } from "../../user"
 import { RiCloseLine, RiMenuLine, RiLogoutBoxLine} from "react-icons/ri"
 
 
-const Navbar = ({user, active}) => {
+const Navbar = ({active}) => {
+    const { user } = useUser()
     const [toggleMenu, setToggleMenu] = useState(false)
     const router = useRouter()
 
@@ -122,7 +124,6 @@ const Navbar = ({user, active}) => {
                             onClick={() => {
                                 setToggleMenu(false);
                                 document.querySelector("body").classList.remove("no-scroll")
-                                document.querySelector("html").classList.remove("no-scroll")
                             }}
                         />
                         : <RiMenuLine
@@ -131,7 +132,6 @@ const Navbar = ({user, active}) => {
                             onClick={() => {
                                 setToggleMenu(true);
                                 document.querySelector("body").classList.add("no-scroll")
-                                document.querySelector("html").classList.add("no-scroll")
                             }}
                         />
                     }
@@ -145,7 +145,13 @@ const Navbar = ({user, active}) => {
                                     user ?
 
                                     <div className={styles.mobile_sign}>
-                                        <a onClick={logout} className={`${styles.little} ${styles.dc}`}>
+                                        <a onClick={() => {
+                                            setToggleMenu(false)
+                                            document.querySelector("body").classList.remove("no-scroll")
+                                            logout()
+                                        }}
+                                           className={`${styles.little} ${styles.dc}`}
+                                        >
                                             <RiLogoutBoxLine color={"var(--colorDarkblue)"} size={27}/>
                                             <p>Se déconnecter</p>
                                         </a>
