@@ -50,7 +50,7 @@ function App({ Component, pageProps }) {
 
     return (
         <UserContext.Provider value={user}>
-            <ThemeProvider>
+            <ThemeProvider disableTransitionOnChange={true}>
                 <Layout title={pageProps.title}><Component {...pageProps} /></Layout>
             </ThemeProvider>
         </UserContext.Provider>

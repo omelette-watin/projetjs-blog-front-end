@@ -5,6 +5,7 @@ import {useTheme} from "next-themes"
 
 function Footer() {
     const { theme, setTheme } = useTheme()
+    const { systemTheme } = useTheme()
     return (
         <footer className={styles.footer}>
             <div className={`${styles.container} container p-x`}>
@@ -97,13 +98,22 @@ function Footer() {
                 </div>
 
                 <div className={styles.cta}>
-                    {/*<Link href={"/register"}>*/}
-                    {/*    <a className={`${styles.btn} btn gradient`}>Créer un compte</a>*/}
-                    {/*</Link>*/}
                     <div className={styles.theme}>
+                        {(theme === "system" && systemTheme === "dark")
+                            ? <RiSunFill  size={27} onClick={() => setTheme("light")} />
+                            : null
+                        }
+                        {(theme === "system" && systemTheme === "light")
+                            ? <RiMoonFill  size={27} onClick={() => setTheme("dark")} />
+                            : null
+                        }
                         {(theme === "dark")
-                            ? <RiMoonFill  size={27} onClick={() => setTheme("light")} />
-                            : <RiSunFill size={27} onClick={() => setTheme("dark")} />
+                            ? <RiSunFill  size={27} onClick={() => setTheme("light")} />
+                            : null
+                        }
+                        {(theme === "light")
+                            ? <RiMoonFill  size={27} onClick={() => setTheme("dark")} />
+                            : null
                         }
                     </div>
 
