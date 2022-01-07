@@ -98,7 +98,7 @@ function Footer() {
                     }
                     {(user && user.role === "reader")
                         ? <Link href={"/dashboard/request/author"}>
-                            <a>Devenir pd</a>
+                            <a>Devenir auteur</a>
                         </Link>
                         : null
                     }
