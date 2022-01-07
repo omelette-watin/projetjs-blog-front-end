@@ -120,6 +120,7 @@ function Footer() {
                 </div>
 
                 <div className={styles.cta}>
+                    Thème
                     <div className={styles.theme}>
                         {(theme === "system" && systemTheme === "dark")
                             ? <RiSunFill  size={27} onClick={() => setTheme("light")} />

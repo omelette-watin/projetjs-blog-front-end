@@ -51,12 +51,17 @@
     color: var(--colorLimeGreen);
 }
 
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .cta .theme {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto 0 1rem;
     padding: 0.5rem;
     width: fit-content;
     color: var(--colorWhite);
@@ -143,5 +148,12 @@
     .links.col2,
     .cta {
         margin-bottom: 1.875rem;
+    }
+
+    .cta {
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+
     }
 }
