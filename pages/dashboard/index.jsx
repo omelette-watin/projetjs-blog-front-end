@@ -5,7 +5,7 @@ import ReaderDashboard from "../../components/dashboard/reader/ReaderDashboard"
 const Dashboard = ({ title }) => {
     const { user } = useUser()
 
-    if (user.role === "reader") {
+    if (user.role === "admin") {
         return (
             <ReaderDashboard />
         )
