@@ -95,7 +95,7 @@ const RegisterForm = () => {
                 <img src="/images/logo.svg" alt=""/>
                 <h3>Your <strong>Opinion</strong> matters !</h3>
             </div>
-            <form onSubmit={handleSubmit} className={`${styles.form} p-x`}>
+            <form onSubmit={handleSubmit} autoComplete={"off"} className={`${styles.form} p-x`}>
                 <div className={styles.headings}>
                     <h2>Inscription</h2>
                 </div>

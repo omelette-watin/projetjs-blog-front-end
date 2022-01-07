@@ -1,5 +1,5 @@
 .error_wrapper {
-    background-color: var(--veryLightGray);
+    background-color: var(--bgVeryLightGray);
     min-height: calc(100vh - 18rem);
 }
 
@@ -32,12 +32,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
     text-decoration: underline;
 }
 
 .links .back:hover {
-    color: var(--limeGreen);
+    color: var(--colorLimeGreen);
 }
 
 .links .back p {

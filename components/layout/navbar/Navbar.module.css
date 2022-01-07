@@ -1,13 +1,13 @@
 .header {
     z-index: 1;
-    background-color: var(--white);
+    background-color: var(--bgWhite);
     transition: transform 200ms ease-in-out;
 }
 
 .navbar {
     padding-top: 1.0625rem;
     padding-bottom: 0.85rem;
-    background-color: var(--white);
+    background-color: var(--bgWhite);
 }
 
 .logo img {
@@ -28,7 +28,7 @@
 .links a {
     position: relative;
     font-size: 1rem;
-    color: var(--grayishBlue);
+    color: var(--colorGrayishBlue);
     transition: color 200ms ease-in-out;
 }
 
@@ -40,17 +40,17 @@
     bottom: -30px;
     display: block;
     height: 5px;
-    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    background: var(--gradientRight);
     opacity: 0;
     transition: opacity 300ms ease-in-out;
 }
 
 .links a:hover {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 .links a.active {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 .links a.active:before {
@@ -77,7 +77,7 @@
 }
 
 .sign a.little:hover {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 .mobile_menu {
@@ -88,8 +88,8 @@
 
 .mobile_menu_close {
     padding: 0.2rem;
-    background-color: var(--white);
-    border: 1px solid var(--darkBlue);
+    background-color: var(--bgWhite);
+    border: 1px solid var(--colorDarkBlue);
     border-radius: 50%;
     z-index: 102;
 }
@@ -125,7 +125,7 @@
     margin-top: 1rem;
     min-width: 240px;
     padding: 2rem 1rem 1.5rem;
-    background: var(--white);
+    background: var(--bgWhite);
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -135,7 +135,7 @@
 }
 
 .mobile_menu_container ul a:hover {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 .mobile_links {
@@ -148,7 +148,7 @@
 }
 
 .mobile_links li a.active {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 .mobile_sign {
@@ -175,7 +175,7 @@
 }
 
 .mobile_sign .little:hover {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 
@@ -210,7 +210,7 @@
     }
 
     .mobile_links {
-        border-bottom: 2px solid var(--lightGrayishBlue);
+        border-bottom: 2px solid var(--colorLightGrayishBlue);
     }
 
     .mobile_sign {

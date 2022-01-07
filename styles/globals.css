@@ -1,13 +1,37 @@
 :root {
     /* Colors */
+    --darkGrey: hsl(214, 7%, 19%);
+    --lighDarkGrey: hsl(216, 7%, 23%);
     --darkBlue: hsl(233, 24%, 36%);
+    --lightBlue: #1877f2;
     --limeGreen: hsl(136, 50%, 56%);
     --brightCyan: hsla(192, 70%, 51%, 0.6);
+    --lightBrightCyan: hsl(192, 70%, 51%);
+
     --grayishBlue: hsl(233, 8%, 62%);
     --lightGrayishBlue: hsl(220, 16%, 96%);
     --veryLightGray: hsl(0, 0%, 98%);
     --white: hsl(0, 0%, 100%);
     --red: #d93025;
+    --orange: #ff9933;
+    --black: #1d2129;
+
+    /* Element colors*/
+    --shadow: rgba(0, 0, 0, 0.24);
+    --gradientLeft: linear-gradient(to left, var(--limeGreen), var(--brightCyan));
+    --gradientRight: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+
+
+    --colorBrightCyan: var(--lightBrightCyan);
+    --colorLimeGreen: var(--limeGreen);
+    --colorOrange: var(--orange);
+    --colorRed: var(--red);
+    --colorGrayishBlue: var(--grayishBlue);
+    --colorLightGrayishBlue: var(--lightGrayishBlue);
+
+    --bgLimeGreen: var(--limeGreen);
+    --bgLightBlue: var(--lightBlue);
+
 
     /* Font Sizes*/
     --font-sm: 0.875rem;
@@ -16,6 +40,32 @@
     --font-lg: 1.875rem;
     --font-vlg: 2.55rem;
     --font-xlg: 3.25rem;
+
+}
+
+[data-theme='light'] {
+    /* Element color */
+
+    --colorDarkBlue: var(--darkBlue);
+    --colorBlack: var(--black);
+    --colorWhite: var(--white);
+
+    --bgWhite: var(--white);
+    --bgDarkBlue: var(--darkBlue);
+    --bgVeryLightGray: var(--veryLightGray);
+}
+
+[data-theme='dark'] {
+
+    --colorDarkBlue: var(--lightGrayishBlue);
+    --colorWhite: var(--darkGrey);
+    --colorBlack: var(--white);
+
+    --bgWhite: var(--darkGrey);
+    --bgDarkBlue: var(--lightGrayishBlue);
+    --bgVeryLightGray: var(--lighDarkGrey);
+
+
 }
 
 html {
@@ -35,8 +85,8 @@ body {
     line-height: 1.3;
     font-size: var(--font-sm);
     font-family: "Public Sans", sans-serif;
-    color: var(--grayishBlue);
-    background: var(--white);
+    color: var(--colorGrayishBlue);
+    background: var(--bgWhite);
 }
 
 
@@ -71,7 +121,7 @@ h4 {
     margin-inline-end: 0;
     font-weight: 600;
     line-height: 1.15;
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 h1 {

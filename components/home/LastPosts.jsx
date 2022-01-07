@@ -1,4 +1,4 @@
-import styles from "./LastPost.module.css"
+import styles from "./LastPosts.module.css"
 import Date from "../helpers/Date"
 import Link from "next/link"
 

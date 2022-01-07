@@ -1,9 +1,6 @@
-.hero {
-    background-color: var(--veryLightGray);
-}
-
-.container {
-    /*background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));*/
+.hero_wrapper {
+    background-color: var(--bgVeryLightGray);
+    border-bottom: 1px solid var(--colorGrayishBlue);
 }
 
 .logo {
@@ -24,14 +21,14 @@
 }
 
 .intro h1 strong {
-    color: var(--limeGreen);
+    color: var(--colorLimeGreen);
     font-weight: unset;
 }
 
 .pitch {
     text-align: justify;
     margin-top: 2rem;
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 .users {
@@ -41,12 +38,12 @@
 }
 
 .users strong {
-    color: var(--limeGreen);
+    color: var(--colorLimeGreen);
     font-weight: 700;
 }
 
 .counter {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
     margin-bottom: 0.4rem;
 }
 
@@ -66,16 +63,16 @@
 
 a.btn {
     font-size: 1rem;
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
     padding: 0.6rem 1rem;
-    border: 2px solid var(--darkBlue);
+    border: 2px solid var(--colorDarkBlue);
     border-radius: 50px;
     transition: all 200ms ease-in-out;
 }
 
 a.btn:hover {
-    color: var(--white);
-    background-color: var(--darkBlue);
+    color: var(--colorWhite);
+    background-color: var(--bgDarkBlue);
 }
 
 @media screen and (min-width: 40em) {

@@ -5,7 +5,8 @@ import { UserContext } from "../components/user"
 import verifyToken from "../services/auth/verifyToken"
 import '../styles/globals.css'
 import '../styles/helpers.css'
-import AuthorizationError from "../components/errors/authorization/AuthorizationError";
+import AuthorizationError from "../components/errors/authorization/AuthorizationError"
+import { ThemeProvider } from "next-themes"
 
 function App({ Component, pageProps }) {
     const [user, setUser] = useState(null)
@@ -36,20 +37,22 @@ function App({ Component, pageProps }) {
     }, [])
 
     if (pageProps.protected && !user) {
-        return <Layout><AuthorizationError/></Layout>
+        return  <ThemeProvider><Layout><AuthorizationError/></Layout></ThemeProvider>
     }
 
     if (pageProps.protected && user && pageProps.userTypes && pageProps.userTypes.indexOf(user.role) === -1) {
-        return <Layout><AuthorizationError/></Layout>
+        return <ThemeProvider><Layout><AuthorizationError/></Layout></ThemeProvider>
     }
 
     if (pageProps.layout === false) {
-        return <Component {...pageProps} />
+        return <ThemeProvider><Component {...pageProps} /></ThemeProvider>
     }
 
     return (
         <UserContext.Provider value={user}>
-            <Layout title={pageProps.title}><Component {...pageProps} /></Layout>
+            <ThemeProvider>
+                <Layout title={pageProps.title}><Component {...pageProps} /></Layout>
+            </ThemeProvider>
         </UserContext.Provider>
     )
 }

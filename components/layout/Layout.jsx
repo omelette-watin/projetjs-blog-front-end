@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useUser } from "../user"
 import styles from './Layout.module.css'
 
-function Layout({ children, title }) {
+const Layout = ({ children, title }) => {
     const { user } = useUser()
     return (
         <div className={styles.layout_wrapper}>

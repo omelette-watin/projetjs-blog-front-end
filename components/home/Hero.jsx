@@ -5,7 +5,6 @@ import { useCountUp } from "react-countup"
 
 const Hero  = ({ countUser }) => {
     const { user } = useUser()
-    console.log(countUser)
     useCountUp({
         ref: "counter",
         start: 0,
@@ -15,7 +14,7 @@ const Hero  = ({ countUser }) => {
         duration: countUser/4
     })
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero_wrapper}>
             <div className={`${styles.container} container p-all`}>
                 <div  className={styles.logo}>
                     <img src="/images/ico.svg" alt=""/>

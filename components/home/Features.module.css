@@ -1,5 +1,5 @@
 .features {
-    background-color: var(--white);
+    background-color: var(--bgWhite);
 }
 
 .headings {
@@ -11,11 +11,11 @@
 }
 
 .headings strong {
-    color: var(--brightCyan);
+    color: var(--colorBrightCyan);
 }
 
 .headings p {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
     font-size: 1rem;
 }
 
@@ -34,16 +34,16 @@
     gap: 1rem;
     padding: 2rem;
     margin: auto;
-    background-color: var(--veryLightGray);
+    background-color: var(--bgVeryLightGray);
     border-radius: 0.5rem;
-    border: 1px solid var(--veryLightGray);
+    border: 1px solid var(--bgVeryLightGray);
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.24);
     transition: all 200ms ease-in-out;
 }
 
 .feature:hover {
-    transform: scale(1.05);
-    border: 1px solid var(--brightCyan);
+    transform: scale(1.02);
+    border: 1px solid var(--colorBrightCyan);
 }
 
 .image {

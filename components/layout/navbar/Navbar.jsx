@@ -116,7 +116,7 @@ const Navbar = ({user, active}) => {
                     }
                     {toggleMenu
                         ? <RiCloseLine
-                            color={"var(--darkBlue)"}
+                            color={"var(--colorDarkBlue)"}
                             className={styles.mobile_menu_close}
                             size={27}
                             onClick={() => {
@@ -125,7 +125,7 @@ const Navbar = ({user, active}) => {
                             }}
                         />
                         : <RiMenuLine
-                            color={"var(--darkBlue)"}
+                            color={"var(--colorDarkBlue)"}
                             size={27}
                             onClick={() => {
                                 setToggleMenu(true);
@@ -144,7 +144,7 @@ const Navbar = ({user, active}) => {
 
                                     <div className={styles.mobile_sign}>
                                         <a onClick={logout} className={`${styles.little} ${styles.dc}`}>
-                                            <RiLogoutBoxLine color={"var(--darkblue)"} size={27}/>
+                                            <RiLogoutBoxLine color={"var(--colorDarkblue)"} size={27}/>
                                             <p>Se déconnecter</p>
                                         </a>
                                     </div>
