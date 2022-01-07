@@ -81,6 +81,8 @@
 
 .no-scroll {
     overflow: hidden;
+    position: relative;
+    height: 100vh;
 }
 
 .is-fixed {

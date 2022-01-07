@@ -130,6 +130,7 @@ const Navbar = ({user, active}) => {
                             onClick={() => {
                                 setToggleMenu(true);
                                 document.querySelector("body").classList.add("no-scroll")
+                                document.querySelector("html").classList.add("no-scroll")
                             }}
                         />
                     }
