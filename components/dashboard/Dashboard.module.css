@@ -50,7 +50,7 @@
 
 .menu ul {
     padding-left: 0.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .menu ul li {
@@ -79,7 +79,6 @@
 @media screen and (max-width: 1050px) {
     .dashboard_container {
         position: relative;
-        border: 1px solid red;
         display: block;
         z-index: 1;
     }
@@ -105,8 +104,9 @@
     }
 
     .menu.closed {
-        padding: 1rem;
+        padding: 1.5rem 2rem 1.5rem 1rem;
         width: 40vh;
+        border: 1px solid var(--colorDarkBlue);
     }
 
     .toggler_mobile {
@@ -114,7 +114,6 @@
         top: 2.5rem;
         right: 1.5rem;
         display: block;
-        width: fit-content;
         z-index: 40;
     }
 

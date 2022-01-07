@@ -117,7 +117,7 @@ const DashboardLayout = ({ children, secondTitle }) => {
                             ?
                             <RiArrowLeftLine size={32} color={"var(--colorDarkBlue)"} onClick={() => {setToggleMenu(false)}}/>
                             :
-                            <RiMenuUnfoldFill size={28} color={"var(--colorDarkBlue)"} onClick={() => {setToggleMenu(true)}}/>
+                            <RiMenuUnfoldFill size={27} color={"var(--colorDarkBlue)"} onClick={() => {setToggleMenu(true)}}/>
                         }
                     </div>
 
