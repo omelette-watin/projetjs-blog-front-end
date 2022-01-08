@@ -34,7 +34,7 @@ const Hero  = ({ countUser }) => {
                             <div>
                                 nous ont déjà rejoint.
                                 {user
-                                    ?  <span> Et vous <strong>{user.username}</strong> bien sûr 💖 !</span>
+                                    ?  <span> Et vous <strong>{user.username}</strong> bien sûr ❤️ !</span>
                                     :  <span> Pourquoi pas <strong><Link href={"/register"}><a>vous</a></Link></strong> ?</span>
                                 }
                             </div>

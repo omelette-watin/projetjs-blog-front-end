@@ -146,7 +146,7 @@ function Footer() {
                 </div>
             </div>
             <div className={styles.signature}>
-               Coded with 💖 by <a href="https://github.com/omelette-watin" target={"_blank"}>Omelette</a>
+               Coded with ❤️ by <a href="https://github.com/omelette-watin" target={"_blank"}>Omelette</a>
             </div>
         </footer>
     )

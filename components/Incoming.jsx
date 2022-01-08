@@ -9,7 +9,7 @@ const Incoming = ({ page }) => {
             <div className={`${styles.incoming} container p-all`}>
                 <h1>Bientôt ici : la page <strong>{page}</strong></h1>
 
-                <p>Merci de votre patience 💖</p>
+                <p>Merci de votre patience ❤️</p>
 
                 <div className={styles.links}>
                     <Link href={"/"}>
