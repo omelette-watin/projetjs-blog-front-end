@@ -19,14 +19,10 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    background-color: var(--veryLightGray);
+    background-color: var(--bgVeryLightGray);
     border-radius: 0.5rem;
     box-shadow: 1px 2px 3px var(--shadow);
     transition: all 200ms ease-in-out;
-}
-
-.question:hover {
-    transform: scale(1.02);
 }
 
 .title div {
@@ -37,7 +33,7 @@
 }
 
 .title h3 {
-    color: var(--darkBlue);
+    color: var(--colorDarkBlue);
 }
 
 .text div {
