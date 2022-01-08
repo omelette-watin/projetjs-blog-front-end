@@ -1,4 +1,4 @@
-import api from "../api";
+import api from "../api"
 
 export const countAllUser = async () => {
     const { data } = await api.get("/users/count")

@@ -1,4 +1,4 @@
-import styles from './Dashboard.module.css'
+import styles from './DashboardLayout.module.css'
 import Link from "next/link"
 import {useUser} from "../user";
 import {RiUser3Fill, RiArticleLine, RiDraftLine, RiArrowLeftLine, RiMenuUnfoldFill} from "react-icons/ri"
@@ -48,7 +48,7 @@ const DashboardLayout = ({ children, secondTitle }) => {
                 }
                 <li>
                     <Link href={"/dashboard/my/comments"}>
-                        <a className={(secondTitle === "Mes Commentaires") ? styles.active : null}>
+                        <a className={(secondTitle === "Mes commentaires") ? styles.active : null}>
                             <FaRegComments/> Mes Commentaires
                         </a>
                     </Link>
